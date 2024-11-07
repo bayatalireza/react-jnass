@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#clock {
+  width: 200px;
+  height: 200px;
+  border: 4px solid #fdfdfd;
+  border-radius: 100%;
+  margin: 50px auto;
+  position: relative;
+}
+#hour-pointer {
+  width: 6px;
+  height: 60px;
+  background-color: #1a1818;
+  border-radius: 30px;
+  position: absolute;
+  left: calc(100px - 3px);
+  top: calc(100px - 60px);
+  transform: rotate(90deg) * 30;
+  transform-origin: bottom;
+}
+#second-pointer {
+  width: 4px;
+  height: 78px;
+  background-color: #ad0909;
+  border-radius: 10px;
+  position: absolute;
+  left: calc(100px - 2px);
+  top: calc(100px - 78px);
+  transform: rotate(90deg) * 6;
+  transform-origin: bottom;
+}
+#minute-pointer {
+  width: 4px;
+  height: 68px;
+  background-color: #1a1818;
+  border-radius: 10px;
+  position: absolute;
+  left: calc(100px - 2px);
+  top: calc(100px - 68px);
+  transform: rotate(90deg) * 6;
+  transform-origin: bottom;
+}
+
+.pin-center {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  background: #242e85;
+  left: calc(100px - 4px);
+  top: calc(100px - 8px);
+  border-radius: 4px;
+}
+
+.digit-clock {
+  display: flex;
+  justify-content: center;
+}
+
+.digit {
+  text-align: center;
+  font-size: 1.8em;
+  background: #353434;
+  color: #e0e1ec;
+  font-weight: bold;
+  width: 100px;
+  border-radius: 4px;
+}
