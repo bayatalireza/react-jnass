@@ -1,8 +1,10 @@
  function Header(){
+      const style = { textTransform: "uppercase"}
+      
       return(
-            <div>
-                  <h1>Fast React Pizza Co.</h1>
-            </div>
+            <header className="header">
+                  <h1 style={style}>Fast React Pizza Co.</h1>
+            </header>
       )
  }
  export default Header;

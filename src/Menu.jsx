@@ -2,12 +2,13 @@ import Pizza from "./component/Pizza";
 
 function Menu(){
       return(
-            <div>
+            <main className="menu">
                   <h1>Our Menu</h1>
                   <Pizza />
                   <Pizza />
                   <Pizza />
-            </div>
+            </main>
+
       )
 }
 export default Menu;

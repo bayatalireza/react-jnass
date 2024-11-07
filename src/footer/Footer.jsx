@@ -16,11 +16,21 @@ function Footer(){
             setInterval(()=>setIsMinute(new Date().getMinutes()*6,6000))
             setInterval(()=>setIsHour(new Date().getHours()* 30,6000))
       },[])
+      function Footer(){
+            const openHour = 8;
+            const closeHour = 20;
+
+            if(Hour >= openHour && Hour <= closeHour){
+                  return <span>"we're currently open"</span>
+            }else{
+                  return <span>"we're currently closed"</span>
+            }
+      }
 
     
       return(
-            <div>
-                  <h1>Footer</h1>
+            <footer className="footer">
+                  <h3>Footer: {Footer()}</h3>
                   <div id="clock">
                         <div id="second-pointer" style={{transform: "rotate("+ isSecond + "deg)"}}></div>
                         <div id="minute-pointer" style={{transform: "rotate("+ isMinute + "deg)"}}></div>
@@ -31,7 +41,7 @@ function Footer(){
                               <div className="digit">{Hour}:{Minute}:{Second}</div>
                         </div>
 
-            </div>
+            </footer>
       )
 }
 export default Footer;
