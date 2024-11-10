@@ -21,16 +21,16 @@ function Footer(){
             const closeHour = 20;
 
             if(Hour >= openHour && Hour <= closeHour){
-                  return <span>"we're currently open"</span>
+                  return <span style={{ background: "lightGreen",padding: '0.7rem' }}>we're open untill {closeHour}:00. Come visit us or order online.</span>
             }else{
-                  return <span>"we're currently closed"</span>
+                  return <span style={{ background: "lightRed",padding: '0.7rem' }}>"we're happy to welcome you between{openHour}:00 and {closeHour}:00"</span>
             }
       }
 
     
       return(
             <footer className="footer">
-                  <h3>Footer: {Footer()}</h3>
+                  <h3>{Footer()}</h3>
                   <div id="clock">
                         <div id="second-pointer" style={{transform: "rotate("+ isSecond + "deg)"}}></div>
                         <div id="minute-pointer" style={{transform: "rotate("+ isMinute + "deg)"}}></div>

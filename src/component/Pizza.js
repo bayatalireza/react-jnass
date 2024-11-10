@@ -1,9 +1,15 @@
-function Pizza() {
+function Pizza({pizza}) {
+ 
+  // if(pizza.soldOut){
+  //   return null
+  // }
   return (
-    <div>
-      <img src="pizzas/focaccia.jpg" alt="focaccia" />
-      <h2>Focaccia</h2>;<p>Bread with italian olive oil and rosemary</p>
-    </div>
+    <li className={`pizza ${pizza.soldOut ? "soldOut" : ""}`}>
+      <img src={pizza.photoName} alt="pizza" srcSet="" />
+      <h3>{pizza.name}</h3>
+      <p>{pizza.ingredients}</p>
+      <span>{pizza.soldOut ? "SOLD OUT" : pizza.price }</span>
+    </li>
   );
 }
 
